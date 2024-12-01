@@ -1,0 +1,28 @@
+{
+    "home": {
+        "title": "Unleash Your Ideas",
+        "description": "Create stunning mind maps, organize your thoughts, and boost your creativity with NodeFrame - the ultimate free mind mapping tool.",
+        "buttonText": ["Start Mapping", "Watch Demo"]
+    },
+    "features": [
+        {
+            "icon": "img/bolt.png",
+            "title": "Lighting Fast",
+            "description": "Create mind maps quickly and efficiently with our intuitive interface."
+        },
+        {
+            "icon": "img/share.png",
+            "title": "Real-time Collaboration",
+            "description": "Work together in real-time with team members on shared mind maps."
+        }
+    ],
+    "testimonials": [
+        {
+            "image": "img/user1.png",
+            "text": "NodeFrame has revolutionized the way I brainstorm. It's intuitive, powerful, and best of all, free!",
+            "name": "Sarah J.",
+            "title": "Product Manager"
+        }
+    ]
+}
+

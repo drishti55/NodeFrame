@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    height: 95px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: white;
+    z-index: 5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+/* Underline effect on hover */
+.nav a {
+    position: relative;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #06d6a0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+/* Active link style */
+.nav a.active {
+    color: #ffd166;
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+/* Navbar background slide-in */
+.nav {
+    transition:  transparent 0.4s ease;
+    background-color: transparent;
+}
+
+.nav.scrolled {
+    background-color: #F1E0FF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.nav-down {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: white;
+}
+.nav > h3 > a{
+    color: black;
+}
+.nav > a > img{
+    width:137px;
+    height: 94px;
+}
+
+.nav > button{
+    width: 133px;
+    height: 55px;
+    background-color: #EACFFF;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+.nav > button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+#circle{
+    width: 65px;
+    height: 65px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: #494848;
+}
+#profile_pic{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.NF:hover{
+    .NF_hidden{
+        display: block;
+    }
+}
+.NF_hidden{
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 90px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 0px 0px 16px 16px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+#home{
+    background-color: #F1E0FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 680px;
+    width: 100%;
+    gap: 25px;
+}
+#home > h1{ 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7rem;
+
+    margin: 0;
+
+    background: linear-gradient(90deg, #FF5F6D 0%, #9A53FF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+}
+#home > p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 80%;
+}
+
+#home > div > button , #home > div > a > button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-right: 15px;
+    font-size: 1rem;
+    width: 160px;
+    height: 40px;
+}
+#home > div > a > button:hover , #home > div > button:hover{
+    background-color: #9747FF;
+}
+
+#home_content{
+    height: 210px;
+    background-color: #AD96FE;
+    display: flex;
+}
+#home_content > p{ 
+    margin: auto;
+    inset: 1;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    width: 80%;
+    word-spacing: 5px;
+}
+
+#features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    background-color: #F1E0FF;
+}
+
+.feature_box{
+    height: 300px;
+    width: 300px;
+
+    padding: 15px;
+
+    background-color: #C0AFFC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    border-radius: 16px;
+}
+.feature_box:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.feature_box > img{
+    width: 50px;
+    height: 50px;
+    transform: translateY(10px);
+}
+
+.feature_box > h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+.feature_box >h6{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.feature_container{
+    width: 100%;
+    display: grid;
+    margin-left: 10%;
+    grid-template: auto auto auto / auto auto auto;
+    row-gap: 25px;
+}
+
+#features > h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    color: #926EC3;
+}
+
+#demo{
+    background-color: #C0AFFC;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+
+#demo > h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    text-align: center;
+    margin: 0;
+}
+
+.pricing_box{
+    width: 350px;
+    height: 500px;
+    background: linear-gradient(0deg, #39016B 0%, #6F02D1 100%);
+    color: white;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pricing_box > *{
+    margin: 0;
+}
+.pricing_box > h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+.pricing_box > h2{
+    font-size: 50px;
+    font-weight: bold;
+
+    span{
+        font-size: 20px;
+        color: #D9D9D9;
+    }
+}
+.pricing_box > h6{
+    font-size: 22px;
+    font-weight: 600;
+}
+.pricing_box > button{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: #A03BD9;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.pricing_box >button:hover{
+    background-color: #A03BD9;
+    color: white;
+}
+.pricing_container{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 25px;
+}
+
+#Pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: #E4DCFF;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+
+#Pricing > h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    color: #926EC3;
+}
+
+.user_box{
+    width: 300px;
+    height: 400px;
+    background-color: #C0AFFC;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+}
+
+.user_box > p{
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+.user_box > h4{
+    font-size: 22px;
+    text-align: center;
+    color: #A03BD9;
+}
+
+.user_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    gap: 127px;
+}
+
+#user_says{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: white;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+
+#user_says > h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    color: #926EC3;
+
+    margin-top: 0;
+}
+
+#join{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: #C0AFFC;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+
+#join > h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    color: #8923E4;
+
+    margin-top: 0;
+}
+
+#join > h6{
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+
+#join > div > button{
+    width: 120px;
+    padding: 10px;
+    background-color: #EACFFF;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+#join > div > button:hover{
+    background-color: white;
+    font-weight: bold;
+}
+#join > div{
+    display: flex;
+    gap: 30px;
+}
+
+#login_logo{
+    width: 188px;
+    height: 115px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+#LogOut{
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.login_home{
+
+    height: 100vh;
+    position: relative;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #F5E7FF;
+
+        height: 80%;
+        aspect-ratio: 9/10;
+        border: 2px solid #C0AFFC;
+        border-radius: 52px;
+        padding: 25px;
+
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    h1{
+        font-family: "Inter", sans-serif;
+        font-size: 40px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    h6{
+        font-family: "Inter", sans-serif;
+        font-size: 22px;
+        font-weight: 100;
+        text-align: left;
+        width: 100%;
+        margin-top: 0;
+        margin: 0;
+    }
+    input{
+        width: 90%;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        margin: 10px;
+        padding-left: 10px;
+        border: 2px solid #C0AFFC;
+    }
+    a{
+        color: 0C50FD;
+        width: 100%;
+        text-align: left;
+    }
+    button{
+        width: 70%;
+        height: 50px;
+        background-color: #C89CF3;
+        color: white;
+        border: 2px solid white;
+        border-radius: 8px;
+        font-size: 22px;
+        font-family: "Inter", sans-serif;
+    }
+    hr{
+        width: 100%;
+    }
+    #google{
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        img{
+            width: 30px;
+            height: 30px;
+            display: inline;
+        }
+        h5{
+            color: black;
+        }
+    }
+    p{
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        width: 90%;
+        a{
+            color: blue;
+        }
+    }
+}
+
+.survey{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    height: 90vh;
+    width: fit-content;
+    margin: auto;
+
+    font-family: "Inter", sans-serif;
+    h5{
+        margin: 0;
+    }
+    h4{
+        width: 80%;
+        text-align: left;
+        font-weight: 600;
+
+    }
+    input , select{
+        width: 70%;
+        height:35px;
+        padding-left: 15px;
+        border-radius: 8px;
+        border: 2px solid #D9D9D9;
+        margin-top: 10px;
+    }
+    button{
+        width: 70%;
+        height: 50px;
+        margin: 25px;
+        background-color: #C89CF3;
+        color: white;
+        border: 2px solid white;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Inter", sans-serif;
+    }
+}
+
+.about{
+    width: 100%;
+    height: 100vh;
+    background-color: #F9EEFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-family: "Montserrat", sans-serif;
+        font-size: 36px;
+        color: #926EC3;
+    }
+    .about_description{
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        text-align: center;
+        width: 50%;
+    }
+}
+
+.about_detail{
+    display: grid;
+    grid-template: auto auto / auto auto;
+    gap: 25px;
+}
+.about_item{
+    width: 432px;
+    height: 202px;
+    text-align: center;
+    h4{
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    p{
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: medium;
+        text-align: center;
+    }
+}
+
+/* Initial hidden state for fade-in elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button bounce animation */
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Hover effect for feature boxes */
+.feature_box:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 3D Transform and Parallax */
+.parallax {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* Glow Effect */
+.glow {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px #06d6a0,
+                 0 0 30px #06d6a0,
+                 0 0 40px #06d6a0,
+                 0 0 50px #06d6a0,
+                 0 0 60px #06d6a0;
+}
+
+/* Animated Gradient Background */
+.animated-background {
+    background: linear-gradient(270deg, #06d6a0, #118ab2, #ef476f, #ffd166);
+    background-size: 800% 800%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Button with Futuristic Hover Effect */
+.hover-effect {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.hover-effect::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 200%;
+    height: 200%;  
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+/* Adding a subtle glow on hover */
+.hover-effect:hover::before {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.tooltip {
+    position: absolute;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    transform: translate(-50%, -10px);
+    opacity: 0;
+    animation: tooltipFade 0.3s forwards;
+}
+
+@keyframes tooltipFade {
+    from { opacity: 0; transform: translate(-50%, -20px); }
+    to { opacity: 1; transform: translate(-50%, -10px); }
+}
+
+/* 3D Rotating Card */
+.feature_card_container {
+    perspective: 1000px;
+}
+
+.feature_card {
+    width: 200px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+    cursor: pointer;
+    position: relative;
+}
+
+.feature_card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #118ab2;
+    color: white;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    background-color: #073b4c;
+    color: white;
+}
+
+/* 3D Rotating Card */
+.feature_card_container {
+    perspective: 1000px;
+}
+
+.feature_card {
+    width: 200px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+    cursor: pointer;
+    position: relative;
+}
+
+.feature_card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #118ab2;
+    color: white;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    background-color: #073b4c;
+    color: white;
+}

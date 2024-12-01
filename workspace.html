@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Editor - NodeFrame</title>
+ 
+    <link rel="stylesheet" href="workspace.css">
+    <style>
+       body{
+    overflow: hidden;
+height: 100vh;
+    background-color: #F9F2FF;
+    margin: 0;
+}
+#logo{
+    width: 75px;
+    height: 50px;
+}
+.editor{
+    background-color: white;
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    position: fixed;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 40px -15px;
+    img{
+        width: 40px;
+        height: 40px;
+    }
+}
+.menu{
+    top: 25px;
+    left: 0;
+    height: 50px;
+    padding-right: 8px;
+    hr{
+        height: 50%;
+    }
+    img{
+        width: 25px;
+        height:25px
+    }
+    button{
+        background-color: #C0AFFC   ;
+        padding: 4px;
+        border: none;
+        border-radius: 8px;
+    }
+}
+.profile{
+    top: 25px;
+    right: 0;
+    height: 50px;
+    padding-right: 8px;
+    img{
+        width: 30px;
+        height: 30px;
+    }
+    button{
+        background-color: #8352C6;
+        color: white;
+ 
+        border: 1px solid #C0AFFC;
+        padding: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 4px;
+ 
+    }
+}
+.tools{
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    flex-direction: column;
+    padding: 8px;
+ 
+    img{
+        width: 30px;
+        height: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="editor menu">
+        <a href="about.html"><img src="img/logo.png" alt="Logo" id="logo"></a>
+        <hr>
+        <h4>My First Board</h4>
+        <hr>
+        <button class="icon-button" id="listButton"><img src="workspace/list.png" alt="List"></button>
+        
+        <button class="icon-button" id="saveButton"><img src="workspace/save.png" alt="Save"></button>
+        <button class="icon-button" id="searchButton"><img src="workspace/search.png" alt="Search"></button>
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search projects...">
+            <ul id="searchResults"></ul>
+        </div>
+        <hr>
+        <button>Upgrade</button>
+    </div>
+   
+    <div class="editor profile">
+        <button class="icon-button" id="navigationButton"><img src="workspace/Navigation.png" alt="Navigation"></button>
+        <button class="icon-button" id="partyButton"><img src="workspace/party.png" alt="Party"></button>
+        <button class="icon-button" id="notificationButton"><img src="workspace/notification.png" alt="Notification"></button>
+        <button class="icon-button" id="profileButton"><img src="workspace/profile.png" alt="Profile"></button>
+        <a href="homepage.html"><button class="icon-button"><img src="workspace/home.png" alt="Home"></button></a>
+        <button>Present</button>
+        <button>Share</button>
+    </div>
+   
+    <div class="editor tools">
+        <button class="icon-button" id="pointerButton"><img src="workspace/pointer.png" alt="Pointer"></button>
+        <button class="icon-button" id="calendarButton"><img src="workspace/Calendar.png" alt="Calendar"></button>
+        <!-- Custom Reminder Modal
+        <div id="reminderModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h3>Set Reminder</h3>
+                <label for="reminderDate">Choose Date and Time:</label>
+                <input type="datetime-local" id="reminderDate">
+                <button id="setReminderButton">Set Reminder</button>
+            </div>
+        </div>-->
+ 
+        <button class="icon-button" id="textButton"><img src="workspace/text_fields.png" alt="Text Fields"></button>
+       
+        <button class="icon-button" id="stickerButton"><img src="workspace/sticker.png" alt="Sticker"></button>
+        <input type="file" id="stickerUpload" accept="image/*" style="display: none;">
+ 
+        <button class="icon-button" id="cropButton"><img src="workspace/crop.png" alt="Crop"></button>
+        <button class="icon-button" id="addButton"><img src="workspace/add.png" alt="Add"></button>
+        <button class="icon-button" id="connectButton"><img src="workspace/connect.png" alt="Arrow"></button>
+        <button class="icon-button" id="deleteButton"><img src="workspace/deleteButton.png" alt="Delete"></button>
+ 
+    </div>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="workspace.js"></script>
+ 
+</body>
+</html>

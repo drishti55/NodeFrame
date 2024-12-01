@@ -1,0 +1,128 @@
+{
+    "project": {
+      "name": "Mind Map Editor - NodeFrame",
+      "description": "A dynamic mind map editor that allows users to create nodes, connect them, upload stickers, add text, and set deadlines with an interactive UI.",
+      "html": {
+        "structure": [
+          {
+            "element": "head",
+            "attributes": {
+              "charset": "UTF-8",
+              "viewport": "width=device-width, initial-scale=1.0"
+            },
+            "title": "Mind Map Editor - NodeFrame",
+            "stylesheet": "workspace.css",
+            "inline_style": [
+              "body { overflow: hidden; height: 100vh; background-color: #F9F2FF; margin: 0; }",
+              "#logo { width: 75px; height: 50px; }",
+              ".editor { background-color: white; display: flex; height: fit-content; width: fit-content; position: fixed; gap: 10px; justify-content: space-between; align-items: center; border-radius: 8px; box-shadow: rgb(38, 57, 77) 0px 20px 40px -15px; }"
+            ]
+          },
+          {
+            "element": "body",
+            "content": [
+              {
+                "element": "div",
+                "id": "logo",
+                "content": [
+                  { "element": "a", "href": "about.html", "content": "Logo" },
+                  { "element": "hr" },
+                  { "element": "h4", "content": "My First Board" },
+                  { "element": "hr" },
+                  { "element": "button", "id": "listButton", "icon": "workspace/list.png" },
+                  { "element": "button", "id": "saveButton", "icon": "workspace/save.png" },
+                  { "element": "button", "id": "searchButton", "icon": "workspace/search.png" },
+                  { "element": "div", "id": "searchContainer", "input": { "type": "text", "id": "searchInput", "placeholder": "Search projects..." }, "ul": { "id": "searchResults" } }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "features": {
+        "nodeCreation": {
+          "description": "Users can create draggable, editable nodes with random colors and custom content.",
+          "eventListeners": [
+            {
+              "element": "addButton",
+              "action": "createNode"
+            }
+          ]
+        },
+        "nodeConnections": {
+          "description": "Nodes can be connected by arrows that can be drawn dynamically between selected nodes.",
+          "eventListeners": [
+            {
+              "element": "connectButton",
+              "action": "toggleConnectMode"
+            }
+          ]
+        },
+        "stickers": {
+          "description": "Users can upload stickers and place them on the mind map.",
+          "eventListeners": [
+            {
+              "element": "stickerButton",
+              "action": "openStickerUpload"
+            }
+          ]
+        },
+        "textEditing": {
+          "description": "Users can add editable text fields within nodes.",
+          "eventListeners": [
+            {
+              "element": "textButton",
+              "action": "addText"
+            }
+          ]
+        },
+        "calendar": {
+          "description": "Users can set deadlines on nodes by selecting a date. The node color changes based on the deadline.",
+          "eventListeners": [
+            {
+              "element": "calendarButton",
+              "action": "setDeadline"
+            }
+          ]
+        }
+      },
+      "interactivity": {
+        "sidebar": {
+          "description": "A collapsible sidebar to display a list of mind map nodes.",
+          "toggleButton": "listButton",
+          "content": [
+            {
+              "type": "list",
+              "data": [
+                {
+                  "name": "Node 1",
+                  "description": "This is the first node"
+                },
+                {
+                  "name": "Node 2",
+                  "description": "This is the second node"
+                },
+                {
+                  "name": "Node 3",
+                  "description": "This is the third node"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "canvas": {
+        "description": "A full-screen canvas used to draw arrows between nodes.",
+        "width": "window.innerWidth",
+        "height": "window.innerHeight",
+        "background": "transparent",
+        "eventListeners": [
+          {
+            "element": "resize",
+            "action": "adjustCanvas"
+          }
+        ]
+      }
+    }
+  }
+  

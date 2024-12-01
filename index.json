@@ -1,0 +1,190 @@
+{
+    "project": {
+      "name": "Node Frame",
+      "description": "A web application for mind mapping, allowing users to create, organize, and save visual maps for brainstorming, study notes, or project planning.",
+      "html_structure": {
+        "doctype": "html",
+        "language": "en",
+        "head": {
+          "meta": [
+            { "charset": "UTF-8" },
+            { "name": "viewport", "content": "width=device-width, initial-scale=1.0" }
+          ],
+          "title": "Node Frame",
+          "stylesheet": "style.css"
+        },
+        "body": {
+          "main": [
+            {
+              "element": "div",
+              "class": "nav",
+              "style": "position: fixed",
+              "content": [
+                { "element": "a", "href": "about.html", "img": { "src": "img/logo.png", "alt": "Node Frame Logo" } },
+                {
+                  "element": "div",
+                  "class": "NF",
+                  "content": [
+                    { "element": "h3", "text": "What is NF" },
+                    {
+                      "element": "div",
+                      "class": "NF_hidden",
+                      "content": [
+                        { "element": "p", "text": "A website that allows users to create and save mind maps for brainstorming, study notes, or project planning. Users can link ideas visually and organize their thoughts dynamically." }
+                      ]
+                    }
+                  ]
+                },
+                { "element": "h3", "link": { "href": "#home", "text": "Home" } },
+                { "element": "h3", "link": { "href": "#features", "text": "Features" } },
+                { "element": "h3", "link": { "href": "#demo", "text": "Demo" } },
+                { "element": "h3", "link": { "href": "#Pricing", "text": "Pricing" } },
+                { "element": "button", "onclick": "location.href='SignUp/SignIn.html'", "text": "Login" },
+                { "element": "button", "onclick": "location.href='SignUp/signUp.html'", "text": "Sign up" },
+                { "element": "div", "id": "circle" }
+              ]
+            },
+            {
+              "element": "section",
+              "id": "home",
+              "content": [
+                { "element": "h1", "text": "Unleash Your Ideas" },
+                { "element": "p", "text": "Create stunning mind maps, organize your thoughts, and boost your creativity with NodeFrame - the ultimate free mind mapping tool." },
+                {
+                  "element": "div",
+                  "buttons": [
+                    { "onclick": "location.href='workspace.html'", "text": "Start Mapping" },
+                    { "link": "#demo", "text": "Watch Demo" }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "section",
+              "id": "features",
+              "content": [
+                { "element": "h1", "text": "Powerful Features for Free" },
+                {
+                  "element": "div",
+                  "class": "feature_container tooltip-trigger",
+                  "feature_boxes": [
+                    {
+                      "img": { "src": "img/bolt.png", "alt": "Bolt" },
+                      "title": "Lighting Fast",
+                      "description": "Create mind maps quickly and efficiently with our intuitive interface."
+                    },
+                    {
+                      "img": { "src": "img/share.png", "alt": "Share" },
+                      "title": "Real-time Collaboration",
+                      "description": "Work together in real-time with team members on shared mind maps."
+                    },
+                    {
+                      "img": { "src": "img/export.png", "alt": "Export" },
+                      "title": "Export Options",
+                      "description": "Export your mind maps in various formats including PDF and images."
+                    },
+                    {
+                      "img": { "src": "img/group.png", "alt": "Team" },
+                      "title": "Team Management",
+                      "description": "Easily manage teams and permissions for collaborative projects."
+                    },
+                    {
+                      "img": { "src": "img/ai.png", "alt": "AI" },
+                      "title": "AI-Powered Suggestions",
+                      "description": "Get intelligent suggestions to enhance your mind maps and boost creativity."
+                    },
+                    {
+                      "img": { "src": "img/multi.png", "alt": "Multi" },
+                      "title": "Multiple Diagram Types",
+                      "description": "Create flowcharts, org charts, wireframes, and more beyond just mind maps."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "section",
+              "id": "demo",
+              "content": [
+                { "element": "h1", "text": "See NodeFrame in Action" },
+                {
+                  "element": "video",
+                  "attributes": { "autoplay": true, "loop": true, "muted": true, "playsinline": true, "width": 960, "height": 535 },
+                  "source": { "src": "img/demo.mp4", "type": "video/mp4" }
+                }
+              ]
+            },
+            {
+              "element": "section",
+              "id": "user_says",
+              "content": [
+                { "element": "h1", "text": "What Our Users Say" },
+                {
+                  "user_feedback": [
+                    {
+                      "img": { "src": "img/user1.png", "alt": "User1" },
+                      "feedback": "NodeFrame has revolutionized the way I brainstorm. It's intuitive, powerful, and best of all, free!",
+                      "user": "Sarah J., Product Manager"
+                    },
+                    {
+                      "img": { "src": "img/user2.png", "alt": "User2" },
+                      "feedback": "As a student, NodeFrame has been a game-changer for organizing my research and study notes.",
+                      "user": "Mike T., Graduate Student"
+                    },
+                    {
+                      "img": { "src": "img/user3.png", "alt": "User3" },
+                      "feedback": "The collaboration features in NodeFrame have made remote brainstorming sessions with my team incredibly productive.",
+                      "user": "Emily R., Creative Director"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "section",
+              "id": "join",
+              "content": [
+                { "element": "h1", "text": "Join Our Free Community" },
+                { "element": "h6", "text": "Start mapping your ideas today and join thousands of users who are boosting their productivity with NodeFrame - absolutely free!" },
+                {
+                  "buttons": [
+                    { "onclick": "location.href='SignUp/signUp.html'", "text": "Sign up Free" },
+                    { "onclick": "location.href='about.html'", "text": "About Us" },
+                    { "onclick": "location.href='SignUp/SignIn.html'", "text": "Get Started" }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "footer",
+              "class": "nav-down",
+              "content": { "element": "h5", "text": "© 2024 NodeFrame. All rights reserved." }
+            }
+          ]
+        },
+        "scripts": ["script.js"]
+      },
+      "javascript": {
+        "fadeIn": {
+          "description": "Adds a fade-in effect for elements that scroll into view.",
+          "eventListener": "DOMContentLoaded",
+          "selector": ".fade-in",
+          "observerOptions": {
+            "threshold": 0.1
+          }
+        },
+        "buttonBounce": {
+          "description": "Applies a bounce effect on the 'Start Mapping' button when hovered over.",
+          "hoverElement": "#home button",
+          "hoverClass": "bounce"
+        },
+        "scrollEffect": {
+          "description": "Changes navbar background when the page is scrolled.",
+          "scrollThreshold": 50,
+          "target": ".nav",
+          "scrolledClass": "scrolled"
+        }
+      }
+    }
+  }
+  
